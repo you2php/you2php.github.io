@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="imagemode" content="force" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-orientation" content="portrait" />
+    <title>You2PHP - 使用指南</title>
+    <meta name="description" content="You2php文档" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?15" />
+    <link href="https://cdn.bootcss.com/prism/1.9.0/themes/prism.css" rel="stylesheet" />
+    <link href="./css/prism-monokai.css" rel="stylesheet" />
+    <link href="https://cdn.bootcss.com/normalize/6.0.0/normalize.css" rel="stylesheet" />
+    <script src="https://cdn.bootcss.com/jquery/1.8.0/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/lightbox2/2.10.0/css/lightbox.min.css" rel="stylesheet" />
+    <script src="https://cdn.bootcss.com/lightbox2/2.10.0/js/lightbox.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 col-xs-12 left">
+            <div id="logo">
+              <img src="../img/logo.png" />
+            </div>
+          </div>
+
+          <div class="col-lg-10 col-md-3 col-xs-12 right">
+            <a class="btn" href="../download.html" target="_blank">下载源码</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="content">
+      <div class="container">
+        <div class="content-wrap">
+          <div class="row">
+            <aside>
+              <div class="menu-box">
+                <h4>导航</h4>
+                <nav>
+                  <ul>
+                    <li><a href="#start" class="current">开始</a></li>
+                    <li><a href="#getapi">获取 Youtube API</a></li>
+                    <li><a href="#install">安装 You2PHP</a></li>
+                    <li><a href="#answer">疑难解答</a></li>
+                    <li><a href="#credit">网站加锁</a></li>
+                    <li><a href="#heroku">在 Heroku 部署 You2PHP</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </aside>
+            <div class="content-info">
+              <div id="pic">
+                <div class="section-txt" id="start">
+                  <h3>Get started</h3>
+                  <p>You2PHP 是一款基于PHP开发的Youtube流量代理脚本，用来搭建Youtube视频镜像站、可实现长城之内观看Youtube。</p>
+                  <p>使用You2PHP的成本非常低，只需要一个支持PHP环境的虚拟海外主机，上传代码简单设置即可立即使用。无论您使用的是虚拟主机，还是VPS，上传即可使用，无需数据库！</p>
+                  <p>You2PHP对接谷歌官方APi，实现了视频/频道搜索、视频在线播放 、频道/类别内容预览、视频下载等功能、浏览这些内容不需要您的设备上安装任何软件。</p>
+                  <p>You2PHP采用GPL开源协议发布，你可以自由的使用和修改代码，随时随地，访问一个URL即可观看全球视频。</p>
+                  <p>You2PHP支持一些基础功能：</p>
+                  <ul>
+                    <li>视频搜索</li>
+                    <li>频道搜索</li>
+                    <li>频道&分类内容浏览</li>
+                    <li>支持多种格式视频下载</li>
+                    <li>支持视频分辨率切换，支持720P高清视频</li>
+                    <li>支持字幕切换</li>
+                  </ul>
+                  <h5>视频代理工作原理：</h5>
+                  <p>You2PHP脚本读取谷歌服务器上的视频并一块一块的写入到你的虚拟主机/服务器内存中，然后转发给您的浏览器，你的虚拟主机/服务器起到了一个中转跳板的作，巧妙的避开了G夫W的拦截，因此可以支持大于虚拟主机空间的视频。</p>
+                </div>
+                <div class="section-txt" id="getapi">
+                  <h3>获取 Youtube API</h3>
+                  <p>You2PHP利用API获取数据，在安装You2PHP脚本之前，需要您申请一个YouTube Data API的密钥，You2PHP获取的所有内容都是通过这个API进行请求。YouTube Data API是谷歌提供的免费API，申请不需要您支付任何费用。</p>
+                  <h5>YouTube Data API申请教程：</h5>
+
+                  <p>0.请确保你的浏览器能打开Google，先注册一个Google账户，(注册地址：https://accounts.google.com/SignUp)如果您已经有了google账户，直接登陆即可。</p>
+                  <p>1.打开 console.developers.google.com </p>
+                  <p>2.打开此链接之后 ，若弹出服务条款更新窗口，全部选&nbsp;<strong>是&nbsp;</strong>，接着点击&nbsp;<strong>接受 。</strong>如果没有弹出此窗口可以忽略并进行下一步。</p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/1.png" />
+                  </a>
+                  <p>3.点击顶部 <strong>选择项目。</strong></p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/2.png" />
+                  </a>
+                  <p>4.点击 <strong>+</strong> 图标创建一个新项目</p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/3.png" />
+                  </a>
+                  <p>5.项目名称使用默认的即可。当然也可以填写自定义的名称。</p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/7.png" />
+                  </a>
+                  <p>6.等待30秒左右，待创建完成之后，点击顶部 <strong>选择项目。</strong>找到您刚创建的项目，点 <strong>打开</strong>。</p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/9.png" />
+                  </a>
+                  <p>7.点击<strong> 启用 API 和服务。</strong></p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/10.png" />
+                  </a>
+                  <p>8.在页面左侧下拉列表中找到<strong> YouTube </strong>。</p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/11.png" />
+                  </a>
+                  <p>9.选择<strong>YouTube Data API。</strong>并且<strong>启用。</strong></p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/12.png" />
+                  </a>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/13.png" />
+                  </a>
+                  <p>10.点击<strong>创建凭据</strong></p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/14.png" />
+                  </a>
+                  <p>11.您使用的是哪个 API？凭据种类选<strong> YouTube Data API v3</strong>，您从哪里调用 API？ 选<strong> 网页服务器</strong>，您要访问哪些数据？选<strong>公开数据</strong> <br />接着点 <strong>我需要哪些凭据？</strong></p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/20.png" />
+                  </a>
+                  <p>12.复制您的<strong>API密钥， </strong>点击<strong>完成。</strong></p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/30.png" />
+                  </a>
+                  <p>到这里Youtube API已经申请完成了，接着就可以使用这个密钥安装You2PHP了。</p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/31.png" />
+                  </a>
+
+                  <pre><code class="language-php">	</code>	</pre>
+                </div>
+                <div class="section-txt" id="install">
+                  <h3>安装 You2PHP</h3>
+                  <p>本程序比较注重自己动手解决问题，伸手党请勿使用。你需要具备网站搭建知识，如代码修改、域名/空间购买与获取、域名绑定、FTP/程序上传等。对于不懂网站搭建的新手请您先通过搜索引擎自学。</p>
+                  <p>本程序对虚拟主机要求并不高，空间支持Curl扩展即可，现在市场上售卖的虚拟主机基本都支持Curl扩展。</p>
+                  <p>如果您没有虚拟主机建议您使用heroku部署You2PHP，或者申请免费空间使用。一般免费空间也支持CURL扩展，请谷歌一下"Free hosting"</p>
+                  <h5>You2PHP安装步骤：</h5>
+                  <!--	<pre class="prettyprint">
+&lt;pre class=&quot;prettyprint&quot;&gt;class Voila {
+public:
+  // Voila
+  static const string VOILA = &quot;Voila&quot;;
+
+  // will not interfere with embedded &lt;a href=&quot;#voila2&quot;&gt;tags&lt;/a&gt;.
+}&lt;/pre&gt;</pre>-->
+                  <p>1.下载You2PHP源码，将Zip源码包解压并上传到您的空间根目录或某个子目录下。</p>
+                  <p>
+                    2.打开浏览器，然后在浏览器的地址栏输入您站点的域名加上/install.php，程序将进入安装页面。<br />例如：假设您的域名是example.com，安装目录为根目录，那么只要在浏览器地址栏输入http://example.com/install.php就可以开始安装系统了。若记住要把example.com换成您的域名哦，安装在根目录需要在域名后面加上路径（http://example.com/test）！<br />
+                    输入访问地址后出来的第一个页面如下：<br />这是一个使用协议页，您必须仔细阅读后并同意协议就可以进入下一步安装界面。
+                  </p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/i/1.png" />
+                  </a>
+                  <p>3.接着会出现如下页面：</p>
+                  <p>这是一个运行环境检测页面，如果您发现有某项不支持，那么请重新设置您的WEB环境以符合系统需求，并重新执行安装。</p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/i/2.png" />
+                  </a>
+                  <p>如果您的主机环境符合所有条件，那么您可以点击下一步继续。</p>
+                  <p>4.接着设置一些基本信息：</p>
+                  <ul>
+                    <li>Youtube API V3 KEY：填您申请的Youtube API密钥</li>
+                    <li>国家代码：这个填一个ISO3166标准的国际代码，默认建议填HK,一般为两位英文字母（如 台湾=TW，日本=JP）长度为2位。所填国家需要Youtube支持（可以从Youtube页面位置列表中看到），切记不能填CN，填CN或其他不支持代码将导致程序报错。</li>
+                    <li>网站名字：为你的站点起一个名字，主要显示在浏览器头部title标签之间。</li>
+                    <li>站点名字：页面将显示这个名字</li>
+                    <li>加/解密密钥：这个填一个随机无序的字符串(夹杂各种符号数字)，作为加密KEY，加密一些外链URL。</li>
+                    <li>你的邮箱：建议填写国外邮箱：gmail yahoo等！用于接收版权内容投诉。</li>
+                  </ul>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/i/3.png" />
+                  </a>
+                  <p>请完整并且正确填写每一项内容后点继续，然后系统自动创建配置文件。</p>
+                  <p>当你看到这样的提示，说明您的站点已经全部安装完毕！您可以开始尽情的观看全球视频！</p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/i/4.png" />
+                  </a>
+                  <p>5.好了，安装已经全部完成，您是不是已经很激动了，让我们打开站点首页看看吧：</p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/i/a.png" />
+                  </a>
+                </div>
+                <div class="section-txt" id="answer">
+                  <h3>疑难解答</h3>
+                  <p>问：You2PHP支持多用户同时在线观看吗？</p>
+                  <p class="tworow">答：支持几个人，但不支持很多人！这个脚本不支持很多人同时观看。无法搭建类似（优酷/腾讯视频）一样的大型视频网站，最多支持几个人同时观看(视服务器配置而定)。</p>
+
+                  <p>如需提问请移步至Github项目页面发Issues https://github.com/You2php/you2php/issues</p>
+                </div>
+                <div class="section-txt" id="credit">
+                  <h3>站点加锁</h3>
+                  <p>如果不想让您的You2PHP站点让其他人访问，可以对站点使用密码保护方法——使用htpasswd文件来实现。访问页面之后会弹出一个输入框，需要输入正确的用户名和密码才能浏览网页上的内容，否则会出错。同时搜索引擎无法收录!</p>
+                  <p>1.首先，需要创建一个名为.htpasswd的文件， 将这个.htpasswd文件存放You2PHP的安装目录下。这个文件用于存储用户名和加密后的密码。比如用户名为admin，密码为123456，那么在.htpasswd文件中的内容可能就是这样的：</p>
+                  <pre><code class="language-php">admin:9dKtKHPyz51Vs</code></pre>
+                  <p>
+                    用户名后紧跟的是密码，用:隔开。而且密码是加密后的密文。上传这个.htpasswd文件You2PHP的安装目录下。有一个在线生成.htpasswd文件的网站：<a href="#" target="_blank">http://www.htaccesstools.com/htpasswd-generator</a
+                    ><br />通过这个地址可以生成加密后的密码。
+                  </p>
+                  <p>2.创建一个新的.htaccess文件，将这个.htaccess文件存放You2PHP的安装目录下。并编辑这个文件，写入如下内容：</p>
+                  <pre><code class="language-java">AuthName "Restricted Area"
+AuthType Basic
+AuthUserFile /home/hosting/public_html/.htpasswd
+AuthGroupFile /dev/null
+require valid-user</code></pre>
+                  <p>注意，需要把AuthUserFile后面/home/hosting/public_html/改成您的You2PHP站点绝对安装路径（如果装在子目录，那么应该加上子目录路径，如 /home/hosting/public_html/youtube）</p>
+                  <p>3.现在打开您的You2PHP站点，会弹出一个这样的框框，需要填写正确的用户名和密码才能浏览！可以通过修改.htpasswd文件修改密码。</p>
+                  <a href="#" data-lightbox="roadtrip">
+                    <img src="https://lijun8088.gitee.io/my-images/paw.png" />
+                  </a>
+                </div>
+                <div class="section-txt" id="heroku">
+                  <h3>在 Heroku 部署 You2PHP</h3>
+                  <p>如果您没有虚拟主机或服务器，也可以使用Heroku部署You2PHP</p>
+                  <p>请访问 看README.md说明</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 center">这是一个开源的项目请勿用于商业用途！使用过程遇到其他问题，请给作者发推</div>
+        </div>
+      </div>
+    </div>
+    <footer class="py-4">
+        <div class="container py-4 text-center">
+            <h6 class="text-muted">Copyright 2018 You2PHP. - All Rights Reserved</h6>
+            <p style="font-size: 16px" class="text-muted">关注/联系作者 :
+                <a href="#" target="_blank"><img src="../img/f.png" /></a>
+                <a href="#" class="mx-2" target="_blank"><img src="../img/t.png" /></a>
+                <a href="https://coindataflow.com/de/aktie/HPURF" target="_blank"><img src="../img/cdf-red.png" alt="coindataflow.com" /></a>
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.bootcss.com/prism/1.9.0/prism.js"></script>
+    <script src="https://cdn.bootcss.com/prism/1.9.0/components/prism-php.min.js"></script>
+    <script src="https://cdn.bootcss.com/prettify/r298/prettify.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>
